@@ -7,9 +7,9 @@
 ## Daftar Fitur 
 --- 
 [x] jika selesai
-1. Tambah Transaksi []
+1. Tambah Transaksi [x]
 2. Daftar Transaksi [x]
-3. Hapus Transaksi []
+3. Hapus Transaksi [x]
 4. Data Persisten []
 5. Ringkasan []
 6. Validasi Form []

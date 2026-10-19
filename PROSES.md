@@ -1,4 +1,4 @@
-## Penjelasan Persona
+# Penjelasan Persona
 ---
 Persona yang didapat adalah Mahasiswa kos. Dengan fitur tambahan input uang bulanan, dan sistem akan menampilkan jatah harian dengan formula sisa uang (dalam konteks ini rekening) dibagi dengan sisa hari bulan ini. Sistem akan menampilkan peringatan jika pengeluaran hari ini melebihi jatah. 
 

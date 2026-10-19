@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Money Manager</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="script.js" />
+    <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,7 +15,7 @@
   </head>
   <body>
     <header><h1>Money Manager</h1></header>
-
+    <p id="peringatan"></p>
     <main>
       <section class="Ringkasan">
         <div class="Box-Ringkasan">
@@ -46,19 +46,20 @@
       </section>
 
       <section>
-        <div class="form-input">
-          <fieldset>
+        <form id="form-input">
+          <fieldset id="tipe-pilihan">
             <legend>Tipe</legend>
             <label>
-              <input
-                type="radio"
-                name="tipe"
-                value="keluar"
-                checked
-              />Pengeluaran
+              <input type="radio" name="tipe" value="keluar" checked />
+              Pengeluaran
             </label>
             <label>
-              <input type="radio" name="tipe" value="masuk" />Pemasukan
+              <input type="radio" name="tipe" value="masuk" />
+              Pemasukan
+            </label>
+            <label>
+              <input type="radio" name="tipe" value="bulanan" />
+              Uang Bulanan
             </label>
           </fieldset>
 
@@ -90,7 +91,7 @@
           </div>
 
           <button type="submit">Submit</button>
-        </div>
+        </form>
       </section>
 
       <section>
