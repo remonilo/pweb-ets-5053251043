@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Money Manager</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -30,7 +30,7 @@
           </div>
 
           <div class="Nominal">
-            <p>Nominal</p>
+            <p>Saldo</p>
             <p id="total-nominal">Rp 0</p>
           </div>
           <div class="Uang-Bulanan">
@@ -90,6 +90,7 @@
             <input type="date" id="tanggal" />
           </div>
 
+          <p id="error-form"></p>
           <button type="submit">Submit</button>
         </form>
       </section>
