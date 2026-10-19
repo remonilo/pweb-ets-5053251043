@@ -4,42 +4,113 @@
     box-sizing: border-box;
 }
 
+:root {
+    --garis: 2px solid black;
+    --jarak: 1rem;
+    --merah: #c00;
+}
+
 body {
-    font-family: JetBrains Mono, monospace;
+    margin: 0;
+    font-family: "JetBrains Mono", monospace;
+    line-height: 1.5;
 }
 
 header, main {
     max-width: 50rem;
-    padding-inline: 1rem;
-    margin: 0 auto;
+    padding-inline: var(--jarak);
+    margin-inline: auto;
 }
 
 header {
-    border-bottom: 2px solid black;
-    margin-bottom: 1rem;
+    border-bottom: var(--garis);
+    margin-bottom: var(--jarak);
+}
+
+main {
+    padding-bottom: 3rem;
 }
 
 main > section {
     margin-top: 1.5rem;
 }
 
+h2 {
+    border-bottom: var(--garis);
+    padding-bottom: 0.25rem;
+}
+
+/* Peringatan jatah harian, hanya tampil jika ada isinya */
+
+#peringatan:empty {
+    display: none;
+}
+
+#peringatan {
+    border: var(--garis);
+    border-color: var(--merah);
+    color: var(--merah);
+    padding: var(--jarak);
+    /* Lebarnya disamakan dengan isi main (50rem dikurangi padding kiri-kanan) */
+    width: calc(100% - 2 * var(--jarak));
+    max-width: 48rem;
+    margin: 0 auto var(--jarak);
+}
+
+/* Ringkasan */
+
 .Box-Ringkasan {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
     gap: 10px;
 }
 
 .Box-Ringkasan > div {
-    border: 2px solid black;
-    padding: 1rem;
+    border: var(--garis);
+    padding: var(--jarak);
 }
 
+.Box-Ringkasan p {
+    margin: 0;
+}
+
+.Box-Ringkasan p:first-child {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.Box-Ringkasan p:last-child {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 0.25rem;
+}
+
+/* Form */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--jarak);
+}
 
 fieldset {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    flex-wrap: wrap;
+    gap: var(--jarak);
+    border: var(--garis);
     padding: 1.25rem;
+    margin: 0;
+}
+
+legend {
+    padding-inline: 0.5rem;
+}
+
+fieldset label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
 }
 
 .field {
@@ -49,21 +120,78 @@ fieldset {
 }
 
 input, select, button {
-    font-family: JetBrains Mono, monospace;
+    font-family: inherit;
+    font-size: 1rem;
 }
 
 .field input, .field select {
-    padding: 1rem;
+    padding: 0.75rem;
+    border: var(--garis);
+    border-radius: 0;
+    background: white;
+}
+
+.field input:focus, .field select:focus, button:focus-visible {
+    outline: 2px dashed black;
+    outline-offset: 2px;
+}
+
+#error-form {
+    color: var(--merah);
+    margin: 0;
+}
+
+#error-form:empty {
+    display: none;
 }
 
 button {
-    padding: 1rem 1rem;
-    margin-top: 0.5rem;
+    padding: 0.75rem var(--jarak);
+    border: var(--garis);
+    border-radius: 0;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: white;
+    color: black;
 }
 
 /* Bagian list pemasukan */
 
+main > section:last-child {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: var(--garis);
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+}
+
+th {
+    background: black;
+    color: white;
+}
+
+td:nth-child(4) {
+    text-align: right;
+    white-space: nowrap;
+}
+
+td button {
+    margin: 0;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.85rem;
+}
+
 .visually-hidden {
     visibility: hidden;
 }
-
