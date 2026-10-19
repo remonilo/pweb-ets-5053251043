@@ -7,7 +7,7 @@ Setiap entri mencatat satu penggunaan AI yang menghasilkan kode: prompt yang dik
 ## Setup: referensi elemen DOM
 - Prompt: "bisa buatkan const masing masing dengan format penulisan yang ada di script.js line 1 dan 2"
 - Dipakai: deklarasi const `document.getElementById(...)` di script.js baris 3-17 (baris 1-2 saya tulis sendiri)
-- Diubah: - 
+- Diubah: ~
 
 ## Perbaikan W1–W6, id, dan peringatan jatah harian
 - Prompt: "aku melanggar apa saja yang di kebutuhan fungsional?" lalu "bisa perbaiki hal tersebut?"
@@ -30,7 +30,7 @@ Setiap entri mencatat satu penggunaan AI yang menghasilkan kode: prompt yang dik
   - tombol hitam yang terbalik warnanya saat hover
   - kolom ringkasan `minmax(9rem, 1fr)` supaya muat 2 kolom di layar 360px
   - `.visually-hidden` diganti pola screen-reader yang benar
-- Diubah: visually-hidden diganti kontennya menjadi view:hidden 
+- Diubah: .visually-hidden diubah kontennya menjadi visibility: hidden 
 
 <!-- Format entri:
 ## Nama fitur (misal W1: Tambah transaksi)
